@@ -1,0 +1,130 @@
+body
+{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+.wrap
+{   
+    min-height: calc(100vh - 70px);
+}
+.Menu
+{   
+    list-style-type:none;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background: rgb(38,96,169);
+}
+.Menu .logo
+{
+    font-size:40px;
+    margin:10px;
+    margin-left: 4%;
+}
+.mainLink a
+{
+    color:white;
+}
+.mainLink a:hover
+{
+    color:#EFF31D;
+}
+li a
+{
+    display: block;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration:none;
+  
+}
+.topArea li
+{
+    float:left;
+    font-family:"Microsoft JhengHei";
+    font-size:30px;
+    color:white;
+    margin:30px 0px 0px 10px;
+}
+#title {
+    font-size: 30px;
+    height:60px;
+    font-family: "Microsoft JhengHei";
+    margin: 30px 10px 0px 20px;
+    color:rgb(38,96,169);
+}
+.block
+{   width: 85%;
+    height: auto;
+    margin: 10px auto;
+    padding: 5px 0px 0px 5px;
+   
+}
+.bookinfo
+{   
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+   
+}
+.info
+{   width:100%; 
+    font-family:"Microsoft JhengHei";
+    border: 1px solid #ADA1A1;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-collapse: collapse;
+}
+.info tr:hover 
+{background-color: #f5f5f5;}
+.info th
+{   font-size: 20px;
+    background:   #d0d0d0;
+    padding: 20px;
+
+   
+}
+.info td
+{
+    text-align: center;
+    line-height: 20px;
+    height:65px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.botmenu
+{
+    margin-top: 3%;
+}
+.botmenu a
+{ 
+   color:rgb(38,96,169);
+   font-family: "Microsoft JhengHei";
+   line-height: 20px;
+}
+.botmenu a:hover
+{
+    color: #B92B00;
+}
+
+.Footer
+{   height: 50px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px 0 25px;
+    background: rgb(38,96,169);;
+}
+.copyright
+{
+position: relative;
+color: #fff;
+font-size: 14px;
+font-style: normal;
+width: 100%;
+text-align: center;
+vertical-align: top;
+}

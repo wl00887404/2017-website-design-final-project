@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我要留言</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/checkbox_style.css" />
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />			
+    </noscript>
+</head>
+<style>
+    .container{
+     margin:auto;
+     background-color:#f5f5f5;
+     width:800px;
+     padding-bottom: 20px;
+    }
+    .button{
+     text-align:center;
+     padding:20px 0;
+    }
+    .top h3{
+     font-family:微軟正黑體;
+     text-align:center;
+     padding:10px 0;
+    }
+    .form-group{
+     font-family:微軟正黑體;
+     font-size:16px;
+    }
+   </style>
+<body>
+	<!-- Header -->
+	<header id="header">
+            <h1>
+                <a href="index.html">E-ticket</a>
+            </h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="search.html" class="icon fa-search"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="member_center.php">Membership</a></li>
+                    <li><a href="my_cart.php">Cart</a></li>
+                    <li><a href="logout.php" class="button special" id="logoutbuttom">log out</a></li>
+                </ul>
+            </nav>
+        </header>		
+    
+    <div class="container">
+        <div class="top">
+           <h3>新增留言</h3>
+           </div>
+           <form id="form1" name="form1" method="post" action="post.php" class="form-horizontal">
+               <div class="form-group">
+                   <label for="id" class="col-sm-4 control-label">帳號:</label>
+                   <div class="col-sm-6">
+                       <input type="text" class="form-control" placeholder="您的帳號" name="guestName" id="guestName" />
+                   </div>
+               </div>
+               <div class="form-group">
+                 <label for="context" class="col-sm-4 control-label">留言內容：</label>
+                 <div class="col-sm-6">
+                     <textarea name="guestContent" class="form-control" id="guestContent" rows="5"></textarea>
+                 </div>
+               </div>
+               <center><input type="submit" value="送出" name="button" id="button" class="btn"></center>
+               <!-- <div class="button"> -->
+                   <!-- <input type="submit" name="button" id="button" value="送出" class="btn"/> -->
+               <!-- </div> -->
+           </form>
+           
+       </div>
+
+</body>
+</html>

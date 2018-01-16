@@ -1,0 +1,7 @@
+SELECT order_id,SUM(price) FROM `order_items` group by order_id;
+取得每筆訂單的total
+
+SELECT user.username ,orders.id,orders.customer_id,orders.time FROM `user`,`orders` WHERE orders.customer_id=user.id
+訂單資料
+
+SELECT orders.id,sort_name,sort_price,sort_time,order_items.quantity,orders.customer_id FROM `sort`,`order_items`,`orders` WHERE orders.id=order_items.order_id

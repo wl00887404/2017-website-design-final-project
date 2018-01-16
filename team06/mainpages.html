@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="hoverEffect.css" rel="stylesheet">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="D:\中正\網頁程式設計\期末專題\team06\modal2.css" rel="stylesheet">
+
+    <title>藝文廣場</title>
+    <style>
+        .footer {
+            border-top: 1px solid #e5e5e5;
+            color: #777;
+            padding: 19px 0;
+            margin-bottom: 0px;
+        }
+
+        .img {
+            margin-right: 20px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            height: 230px;
+            width: 230px;
+            overflow: hidden;
+        }
+
+        .lastimg {
+            margin-left: 0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 250px;
+            width: 250px;
+            overflow: hidden;
+        }
+
+        .navfont {
+            color: white;
+        }
+
+        .navfont :hover {
+            color: white;
+        }
+
+        .btn__badge {
+            background: #ff9500;
+            color: white;
+            font-size: 10px;
+            position: relative;
+            padding: 3px 6px;
+            top: -25px;
+            right: 20px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-image:url(larm-rmah-273854.jpg)">
+
+
+        <!--navbar-->
+        <div style="margin:0px; padding:0px">
+            <nav class="navbar navbar-default" role="navigation" style="background-color:rgb(27, 58, 53); position: relative; margin:0px">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" style="font-size:30px; color:white;position: absolute; top: 50%; transform: translateY(-50%)">藝文廣場</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav pull-right">
+                        <li>
+                            <a href="ShoppingCart.html" class="glyphicon glyphicon-shopping-cart" style="color:white; padding-top:25px; font-size:30px"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="glyphicon glyphicon-search" style="color:white; padding-top:25px; font-size:30px"></a>
+                        </li>
+                        <li style="font-size:20px; padding-top:10px; padding-bottom:10px">
+                            <a class="navfont" href="#"> 登陸</a>
+                        </li>
+                        <li>
+                            <a class="navfont" href="#" style="font-size:20px; padding-top:25px">註冊</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t39.2081-6/c0.0.51.51/p50x50/14365540_180484242386565_647877825_n.png?oh=4e12707e438e8adc17489467f65bb884&oe=5AC5BD32"
+                                    style="height: 3em; width: 3em; border-radius:50%">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--轮播图-->
+        <div style="position:relative; margin:0px">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="position:absolute">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item">
+                        <img src="https://www.huashan1914.com/WebUPD/huashan1914/Index/做你的白日夢-banner-華山_1920x430px.jpg">
+                        <div class="carousel-caption">
+                            <button type="button" id="myButton" class="btn btn-primary" autocomplete="off">
+                                BUY TICKETS NOW!
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item  active">
+                        <img src="https://www.huashan1914.com/WebUPD/huashan1914/Index/華山媒體素材-03_1920x430.jpg">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="icon-prev" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="icon-next" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+
+        <div calss="container" style="position:relative; margin-top:318px; margin-bottom:20px">
+            <div class="row" style="display:flex; justify-content:center; align-items:center;">
+                <div class="col-md-2 img hovereffect ">
+                    <img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoOEBIZN1zPV9MMFJ8LvyAGaJ9Op9rVNmdjfN8KJK3D3uQgy41oQ">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal">
+                            點擊查看
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/4.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal2">                             點擊查看                         </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/3.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal3">                             點擊查看                         </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/2.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal4">                             點擊查看                         </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/3.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal5">                             點擊查看                         </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="display:flex; justify-content:center; align-items:center;">
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/11_17121110554013417.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal6">                             點擊查看                         </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/4.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal7">                             點擊查看                         </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/3.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal8">                             點擊查看                         </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/2.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal9">                             點擊查看                         </button>
+                    </div>
+                </div>
+                <div class="col-md-2 img hovereffect">
+                    <img class="img-responsive" src="https://www.huashan1914.com/WebUPD/huashan1914/Index/3.jpg">
+                    <div class="overlay">
+                        <button type="button" class="info" data-toggle="modal" data-target="#exampleModal10">                             點擊查看                         </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <li>活動名稱：卡娜赫拉的愜意小鎮</li>
+                        <li>活動地點:華山1914創意文化園區-紅磚區西一與西二館</li>
+                        <li>活動時間:2017/12/30~2018/03/05</li>
+                        <li>價格資訊:250/張</li>
+                        <li>主辦單位:飛躍文創股份有限公司,寬宏藝術經紀股份有限公司</li>
+                        </ul>
+                        <ul>
+                            <li>活動介紹:</li>
+                            日本超人氣插畫家、漫畫家卡娜赫拉，卡娜赫拉的愜意小鎮即將舉辦第一次大型的主題展覽。從Line的貼圖開始起身，漫畫連載、企業廣告以及周邊商品等等都非常廣泛，插畫家兼漫畫家卡娜赫拉，由他筆下畫出卡娜赫拉的小動物舉辦首次的特別展覽，由發現、想像、體驗各式各樣的小故事，民眾會到訪小動物們生活的街道，並且街道中會遭遇到許多作者精心設計的場景，並且透過這些場景獲得小驚喜及療癒感。作者也親自參與此展的監製，規劃整個展覽的拍照場景，每個故事主題都是由作者仔細思考後描述呈現的，並且希望大家來到展覽後可以享受這樣的內容。
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Modal2 -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱： 德麥食品 X 華山  繽紛快閃派對</li>
+                <li>活動地點:華山1914文化產業園區 ( 東1A木棧板區)</li>
+                <li>活動時間:2017年12月21日(四)~2018年1月10日(二)</li>
+                <li>價格資訊:100/張</li>
+                <li>主辦單位:德麥食品股份有限公司</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                1.《岩燒蜂蜜蛋糕》
+                超夯岩燒蜂蜜蛋糕濃郁的蜂蜜香味，蛋糕體有如雲朵般的柔軟綿密，搭上表面多層次口感的蜂蜜起司醬，美味的蛋糕讓人陶醉在其中，現場不定時舉辦試吃。<br>
+                
+                2. 《TMC香醇咖啡》
+                喚醒咖啡豆原有味道與香氣，烘出香醇迷人的風味咖啡，TMC咖啡，將豆子本身底蘊的香味及特質完全引出，創造不但具有優質口韻<br>
+                
+                3. 《歡樂聖誕薑餅屋》
+                聖誕節充滿可愛活潑的氣息，是大人小孩最歡樂的季節，能夠與情人、姐妹淘們分享聖誕節的幸福氣氛，也可以與更多朋友相聚，迎接來年的美好時光！濃濃的聖誕氣息，歡樂耶誕節是自己與家人朋友動手DIY製作屬於自己的薑餅屋。
+                多種美麗又夢幻的薑餅屋，你是否也心動想要自己做一個呢？<br>
+                
+                4. 《你打卡我送禮》
+                只要買岩燒蜂蜜蛋糕現場拍照上傳FB或IG即可抽精美禮物。
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal3 -->
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:台北華山快閃店</li>
+                <li>活動地點：華山1914文化創意產業園區中4A-2 館</li>
+                <li>活動時間:106年12月1日至107年2月28日</li>
+                <li>價格資訊:0/張</li>
+                <li>主辦單位:匠藝生活</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                +d是h concept公司的原創品牌，獨特的創意產品在世界各處都獲得了好評。為了希望能將創造出更多好商品的理念以及將"創造者"與"使用者"，"創意"與"生活" 聯繫起來，以+d為首結合眾多創意商品企業一同打造的嶄新產品傳遞給大家，因此設立了KONCENT這樣與消費者對談的平台。
+                憑著想要將KONCENT的產品這份細膩、絕不輕易妥協的職人精神展現給台灣的消費者及設計師 這樣的的熱情 匠藝生活 繼2016年十一月台灣第一間KONCENT台北旗艦店於環境清幽、綠意盎然的｢富錦｣街區開幕後 為了讓KONCENT產品背後的故事,創意及日本職人的想法與生活態度 分享給更多喜愛文創產品的朋友 我們將於2017年十二月一日於交通便捷,充滿人文創意氣息的華山文創園區開設為期三個月的快閃店。
+                除了既有的產品外 您將會在KONCENT華山快閃店 發現多項"華山限定"的產品，歡迎喜愛創意產品的朋友們來共享"創意即生活"的體驗。
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Modal4 -->
+  <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:蜷川實花 IN MY ROOM｜潮男群像展</li>
+                <li>活動地點: 華山 東3A烏梅酒廠</li>
+                <li>活動時間: 2017/12/17-2018/02/25</li>
+                <li>價格資訊:200/張</li>
+                <li>主辦單位:MCIP HOLDINGS、吉本興業</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                擅長用濃烈色彩勾勒影像的攝影師蜷川實花，在「蜷川實花 IN MY ROOM｜潮男群像展」 中，展現有別以往的攝影觀點。
+                
+                這系列作品即使有蜷川獨特的色彩感，卻充滿了神秘、騷動、 讓人心癢的暗黑氣息，刻意挑釁的視角，
+                
+                讓這些明星們褪掉表面的光鮮亮麗，直逼男人孤獨時 心中特有的悽愴。包含窪塚洋介、永瀨正敏、綾野剛、齋藤工、妻夫木聰等在內的男星，
+                
+                以及 為了台灣這次的展出，特別邀請台灣超強話題的潮男-發行全新 EP 再掀人氣高潮的邱勝翊、將 在小巨蛋舉行演唱會的小天王 Bii 畢書盡，年底壓軸新片《帶我去月球》的男主角劉以豪三位 入鏡，這些潮男們均在蜷川實花非常私人的鏡頭下，表現出獨特的性感和魅力。
+                
+                除了展出 42 位潮男，近百件的作品外，還有各式各樣，蜷川實花指導企劃製作的 限定商品販售。
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal5 -->
+  <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:OD表演工作室《老童話》：實境實驗劇場｜未來老年生活想像</li>
+                <li>活動地點:華山文創 中3館2F-拱聽</li>
+                <li>活動時間:2018年01月14日 （星期六）</li>
+                <li>價格資訊:600/張</li>
+                <li>主辦單位:OD表演工作室</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                在台北這個位居台灣六都老化之首的城市，超高齡社會的來臨已在不遠的將來。現有的長照環境，有機構、在地安養、居家安養等各式長照安排或據點，然而，未來的老人們，對於自己有什麼樣的想像呢？除了照護之外，還有沒有其他可能性？所謂的「老派」，也許是一種對於不同生活方式的尊重與理解。
+                
+                《老童話》試圖去研究現代人的各種特質，融會至大家熟悉的童話角色，結合幾種集體樣貌塑造出不同的年長者性格及生活處境，再透過互動實驗劇場的方式，引導觀眾直接參與並蒐集聆聽各個角色老年生活的需求，進而共同為童話角色討論出最合宜的規劃，過程中因參與產生眾多關於自我老年生活剪影的投射。當觀眾與演員齊力完成演出之後，我們期待有機會聽見觀眾即未來老人的發聲，而觀眾將透過討論接收到潛藏的訊息：你我，都即將是未來的老人之一。
+                
+                 
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal6 -->
+  <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:卡米地好事派：命運交換局</li>
+                <li>活動地點:華山文創 中3館2F-拱聽</li>
+                <li>活動時間:01 .26 (五)  - 01 .28 (日)</li>
+                <li>價格資訊:500/張</li>
+                <li>主辦單位:卡米地喜劇俱樂部</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                Switching Destinies
+                
+                你的人生很可笑嗎？ 那跟我換吧！
+                
+                脫口秀 x 喜劇
+                
+                一款人一款命
+                有人含著金湯匙出生
+                有人含著眼淚強顏歡笑
+                你無法決定你的家世背景
+                但你可以立志努力打拼
+                問題是，你真的能嗎？
+                
+                你羨慕著誰的人生
+                如果給你一個機會交換命運
+                你會選擇成為誰 是賈伯斯（死？）、習進平、還是蔡依林？
+                今晚就一起進入好事派的命運佈局吧！
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Modal7 -->
+  <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:巴黎龐畢度中心 兒童藝術工作坊</li>
+                <li>活動地點:華山文創 東2館</li>
+                <li>活動時間:12 .22 (五)  - 02 .28 (三)</li>
+                <li>價格資訊:250/張</li>
+                <li>主辦單位:漢華文教</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                《工作坊1》影子遊戲
+                
+                工作坊的設計以投影機為主要創作媒介。今日，藝術家已經將投影機視為一種「再挪用」（réappropriation）的創作工具。
+                
+                工作坊將整個展示空間塑造成一個互動的世界，讓小朋友們成為創作者，利用各種投影素材和載體來呈現點綴空間的短暫影像。<br>
+                
+                 
+                
+                《工作坊2》猜猜我是誰
+                
+                工作坊邀請小朋友們透過拼貼、重組圖像的方式，進入藝術家艾洛的世界。
+                
+                這名藝術家利用各式科學期刊與力學著作來創作，透過剪裁與組合來完成超現實混合的平面作品。
+                
+                透過組成工作坊的基本創作材料，小朋友們將會利用拼貼的技巧完成自畫像，並且可以將作品帶回家。<br>
+                
+                 
+                
+                《工作坊3》跳舞方塊　
+                
+                小朋友們結合地上五顏六色的柔軟材料，將各種線條匯集起來，形成道路、相互交叉、上下交錯、佔據空間，成為有節奏感的組合。
+                
+                透過改造、比較、想像、幻想，工作坊引領大家認識藝術家蒙德里安，以及讓藝術動起來的幾何抽象概念。
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal8 -->
+  <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:泡泡先生 X 卡答國際 期間限定快閃店</li>
+                <li>活動地點:華山文創 貨櫃屋1</li>
+                <li>活動時間:12 .16 (六)  - 03 .01 (四)</li>
+                <li>價格資訊:0/張</li>
+                <li>主辦單位:卡答國際</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                1970年一對美國與法國夫婦，Annette Tison和Talus Taylor<br>
+                他們在一張餐巾紙上勾勒出一個圓嘟嘟的角色 : Barbapapa<br>
+                
+                Taylor夫婦在盧森堡花園散步<br>
+                看到一個小朋友追著母親跑<br>
+                口中一直叫著「Barbe a papa」<br>
+                身為美國人的Talus並不懂這個詞的意思<br>
+                於是妻子向丈夫說明~這是法文棉花糖的意思<br>
+                當時還不懂法語的Talus<br>
+                便從如此可愛有趣的發音得到創作靈感<br>
+                創作出「barbapapa」能夠隨意變換形狀的奇異動物<br>
+                
+                泡泡先生不是棉花糖,而是從土裡生出的角色<br>
+                後來更是成長變成有不同個性且熱愛助人的一家人
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Modal9 -->
+  <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:「做你的白日夢! 圖文特展」我是馬克ｘ大陰盜百貨ｘ鬼門圖文ｘDorothy</li>
+                <li>活動地點:華山1914文化創意產業園區 中四A館</li>
+                <li>活動時間:2017年12月23日(六)~2018年03月04日(日)</li>
+                <li>價格資訊:280/張</li>
+                <li>主辦單位:愛貝克思股份有限公司 閣林文創股份有限公司</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                記得曾經做過的白日夢嗎？<br>
+                
+                幾次被現實無情打臉「醒醒吧！還在做夢啊！」<br>
+                
+                但如果沒有『萊特兄弟』的白日夢，<br>
+                
+                我們不會知道人類原來也能在天空翱翔！<br>
+                
+                沒有你的白日夢，世界無趣只有一個方向！<br>
+                
+                 
+                
+                「做你的白日夢! 圖文特展」－我是馬克ｘ大陰盜百貨ｘ鬼門圖文ｘDorothy ，四位風格迥異的人氣圖文作家，透過各色各異的無邊想像，聯手編織如夢似幻的白日夢奇想。年末回顧苦辣酸甜，想要祛傷解鬱，就讓天馬行空愛做白日夢的四位圖文作家，引領你進入四度空間，突破傳統給你全新「視」界，結合AR擴增實境技術，魔幻場景躍然眼前，白日夢再進化，不只給你一雙翅膀、抒發負能量，更能滿載正能量！
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Modal10 -->
+  <div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">活動詳情</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <li>活動名稱:相遇舞蹈節 –肢體暨劇場體驗工作坊</li>
+                <li>活動地點:華山文創 果酒練舞場</li>
+                <li>活動時間:03 .12 (一)  - 03 .18 (日)</li>
+                <li>價格資訊:380/張</li>
+                <li>主辦單位:三十舞蹈劇場</li>
+              </ul>
+              <ul>
+                <li>活動介紹:</li>
+                在這裡，以另一種姿態和人群互動，在這裡，編舞家近距離與你交流，<br>
+                
+                在這裡，感受舞蹈在體內的流動，在這裡，你遇見了全新的自己。<br>
+                一、肢體工作坊：<br>
+                
+                透過不同的身體分享課程，如即興、當代舞蹈技巧、接觸即興與街舞，讓學員學習舞動、感受律動、享受舞蹈、啟發自我。<br>
+                二、劇場體驗：<br>
+                
+                探索劇場的設備與魔力的秘密，以及瞭解劇場與表演工作者的工作實況。<br>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">加入購物車</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+        <div class="footer ">
+            <div class="container">
+                <div class="row footer-top">
+                    <div class="col-sm-6 col-lg-6">
+                        <h4></h4>
+                        <p>歡迎購票,這裡有你想要的</p>
+                    </div>
+                    <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+                        <div class="row about">
+                            <div class="col-xs-3">
+                                <h4>關於</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="">關於我們</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-3">
+                                <h4>聯繫方式</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a target="_blank" title="官方微博" href="">新浪微博</a>
+                                    </li>
+                                    <li>
+                                        <a href="">電子郵件</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class="row footer-bottom">
+                    <ul class="list-inline text-center">
+                        <li>Copyright &copy;2017. n Software All Rights Reserved.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
